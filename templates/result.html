@@ -1,32 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
+    <meta charset="UTF-8">
     <title>Wynik przetwarzania</title>
     <style>
         pre {
             white-space: pre-wrap;
+            word-wrap: break-word;
             background: #f5f5f5;
-            padding: 15px;
-            border-radius: 5px;
-        }
-        .stats {
-            margin: 15px 0;
             padding: 10px;
-            background: #eef;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <h2>Wynik przetwarzania {% if processing_mode == 'asynchronous' %}(asynchroniczne){% endif %}</h2>
-
-    <div class="stats">
-        <p>Długość oryginalna: {{ original_length }} znaków</p>
-        <p>Długość przetworzona: {{ processed_length }} znaków</p>
-    </div>
-
-    <h3>Zmodyfikowany tekst:</h3>
-    <pre>{{ scrambled_text }}</pre>
-
-    <a href="/app">Przetwórz kolejny plik</a>
+    <h2>Zmodyfikowany tekst</h2>
+    {% if modified_text %}
+        <pre>{{ modified_text }}</pre>
+    {% else %}
+        <p>Brak tekstu do wyświetlenia</p>
+    {% endif %}
+    <a href="/app">Wróć</a>
 </body>
 </html>

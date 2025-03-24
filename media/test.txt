@@ -1,0 +1,1 @@
+Historia zmian: Każdy dokument powinien mieć swoją historię zmian, aby użytkownik mógł śledzić, jakie poprawki zostały wprowadzone i przez kogo.
